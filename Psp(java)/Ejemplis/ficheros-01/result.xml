@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<empleado>
+   <title>A New Hope</title>
+   <episode_id>4</episode_id>
+   <opening_crawl>It is a period of civil war.&#13;
+Rebel spaceships, striking&#13;
+from a hidden base, have won&#13;
+their first victory against&#13;
+the evil Galactic Empire.&#13;
+&#13;
+During the battle, Rebel&#13;
+spies managed to steal secret&#13;
+plans to the Empire's&#13;
+ultimate weapon, the DEATH&#13;
+STAR, an armored space&#13;
+station with enough power&#13;
+to destroy an entire planet.&#13;
+&#13;
+Pursued by the Empire's&#13;
+sinister agents, Princess&#13;
+Leia races home aboard her&#13;
+starship, custodian of the&#13;
+stolen plans that can save her&#13;
+people and restore&#13;
+freedom to the galaxy....</opening_crawl>
+   <director>George Lucas</director>
+   <producer>Gary Kurtz, Rick McCallum</producer>
+   <release_date>1977-05-25</release_date>
+   <characters>
+      <character>"https://swapi.dev/api/people/1/"</character>
+      <character>"https://swapi.dev/api/people/2/"</character>
+      <character>"https://swapi.dev/api/people/3/"</character>
+      <character>"https://swapi.dev/api/people/4/"</character>
+      <character>"https://swapi.dev/api/people/5/"</character>
+      <character>"https://swapi.dev/api/people/6/"</character>
+      <character>"https://swapi.dev/api/people/7/"</character>
+      <character>"https://swapi.dev/api/people/8/"</character>
+      <character>"https://swapi.dev/api/people/9/"</character>
+      <character>"https://swapi.dev/api/people/10/"</character>
+      <character>"https://swapi.dev/api/people/12/"</character>
+      <character>"https://swapi.dev/api/people/13/"</character>
+      <character>"https://swapi.dev/api/people/14/"</character>
+      <character>"https://swapi.dev/api/people/15/"</character>
+      <character>"https://swapi.dev/api/people/16/"</character>
+      <character>"https://swapi.dev/api/people/18/"</character>
+      <character>"https://swapi.dev/api/people/19/"</character>
+      <character>"https://swapi.dev/api/people/81/"</character>
+   </characters>
+   <planets>
+      <planet>"https://swapi.dev/api/planets/1/"</planet>
+      <planet>"https://swapi.dev/api/planets/2/"</planet>
+      <planet>"https://swapi.dev/api/planets/3/"</planet>
+   </planets>
+   <starships>
+      <starship>"https://swapi.dev/api/starships/2/"</starship>
+      <starship>"https://swapi.dev/api/starships/3/"</starship>
+      <starship>"https://swapi.dev/api/starships/5/"</starship>
+      <starship>"https://swapi.dev/api/starships/9/"</starship>
+      <starship>"https://swapi.dev/api/starships/10/"</starship>
+      <starship>"https://swapi.dev/api/starships/11/"</starship>
+      <starship>"https://swapi.dev/api/starships/12/"</starship>
+      <starship>"https://swapi.dev/api/starships/13/"</starship>
+   </starships>
+   <vehicles>
+      <vehicle>"https://swapi.dev/api/vehicles/4/"</vehicle>
+      <vehicle>"https://swapi.dev/api/vehicles/6/"</vehicle>
+      <vehicle>"https://swapi.dev/api/vehicles/7/"</vehicle>
+      <vehicle>"https://swapi.dev/api/vehicles/8/"</vehicle>
+   </vehicles>
+   <species>
+      <specie>"https://swapi.dev/api/species/1/"</specie>
+      <specie>"https://swapi.dev/api/species/2/"</specie>
+      <specie>"https://swapi.dev/api/species/3/"</specie>
+      <specie>"https://swapi.dev/api/species/4/"</specie>
+      <specie>"https://swapi.dev/api/species/5/"</specie>
+   </species>
+   <created>2014-12-10T14:23:31.880000Z</created>
+   <edited>2014-12-20T19:49:45.256000Z</edited>
+   <url>https://swapi.dev/api/films/1/</url>
+</empleado>

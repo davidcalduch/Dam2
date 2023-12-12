@@ -1,0 +1,24 @@
+INDEX VERSION 1.134+C:\Users\dacal\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+3945861034.index
+2348673798.index
+1278843982.index
+2393563997.index
+798185144.index
+4244298640.index
+856767537.index
+358920302.index
+1049240189.index
+700885893.index
+3858999390.index
+1568272915.index
+2022050097.index
+1100690008.index
+3413725848.index
+4040314671.index
+260127143.index
+1097059411.index
+1865797976.index
+580779656.index
+4016882383.index
+4030475637.index
+195406659.index

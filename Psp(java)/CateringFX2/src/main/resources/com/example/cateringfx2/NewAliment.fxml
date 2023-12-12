@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="481.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cateringfx2.NewAliment">
+   <children>
+      <Text fill="#4b11f7" layoutX="217.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Aliments">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Text layoutX="141.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="141.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="141.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frecuency">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="141.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calories">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="141.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carbohydrates">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="141.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fat">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="idNameNA" layoutX="323.0" layoutY="121.0" />
+      <TextField fx:id="idDescriptionNA" layoutX="324.0" layoutY="156.0" />
+      <TextField fx:id="idFrecuencyNA" layoutX="324.0" layoutY="197.0" />
+      <TextField fx:id="idCaloriesNA" layoutX="323.0" layoutY="239.0" prefHeight="23.0" prefWidth="85.0" />
+      <TextField fx:id="idCarbohydratesNA" layoutX="323.0" layoutY="278.0" prefHeight="23.0" prefWidth="85.0" />
+      <TextField fx:id="idFatNA" layoutX="323.0" layoutY="321.0" prefHeight="23.0" prefWidth="85.0" />
+      <Button fx:id="idSaveNA" layoutX="207.0" layoutY="404.0" mnemonicParsing="false" onAction="#save_guardar" prefHeight="23.0" prefWidth="85.0" text="Save" textFill="#131cc9">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="idCerrarNA" mnemonicParsing="false" onAction="#volver" prefHeight="23.0" prefWidth="85.0" text="Cerrar" textFill="#c73814">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="idMilk" layoutX="127.0" layoutY="369.0" mnemonicParsing="false" text="Milk" />
+      <CheckBox fx:id="idNuts" layoutX="194.0" layoutY="369.0" mnemonicParsing="false" text="Nuts" />
+      <CheckBox fx:id="idEgg" layoutX="259.0" layoutY="369.0" mnemonicParsing="false" text="Egg" />
+      <CheckBox fx:id="idGluten" layoutX="323.0" layoutY="369.0" mnemonicParsing="false" text="Gluten" />
+   </children>
+</AnchorPane>

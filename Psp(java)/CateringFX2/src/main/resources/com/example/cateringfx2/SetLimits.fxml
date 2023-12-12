@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="357.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cateringfx2.SetLimits">
+   <children>
+      <Text fill="#4308e7" layoutX="134.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Set Limits" wrappingWidth="270.1366729736328">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <Text layoutX="102.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calories" wrappingWidth="63.73675537109375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="102.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carbohydates" wrappingWidth="138.13677978515625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="102.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fat" wrappingWidth="138.13677978515625">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="caloriesid" layoutX="260.0" layoutY="101.0" />
+      <TextField fx:id="idCarbohydatesSL" layoutX="260.0" layoutY="144.0" />
+      <TextField fx:id="idFatSeT" layoutX="260.0" layoutY="193.0" />
+      <Button fx:id="btnSave" layoutX="208.0" layoutY="237.0" mnemonicParsing="false" onAction="#guardar_save" prefHeight="27.0" prefWidth="64.0" text="Save" />
+   </children>
+</AnchorPane>

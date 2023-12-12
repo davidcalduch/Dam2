@@ -1,0 +1,12 @@
+Steak;Pork steak;Weekly;false;false;false;false;120.0;0.0;200.0
+Bread;Wheat bread;Daily;true;false;false;false;20.0;100.0;0.0
+Egg;Eggs;Weekly;true;true;true;true;30.0;0.0;30.0
+caracol;sabroso;amenudo;true;false;true;false;33.0;33.0;33.0
+caracculo;asdasda;sasdad;true;false;true;false;12.0;12.0;12.0
+cara;12;12;true;false;true;false;12.0;12.0;12.0
+david;comida;hola;true;false;false;false;12.0;12.0;12.0
+comida;buenas;every;false;false;true;true;12.0;12.0;12.0
+carne;hola;hola;false;false;true;false;12.0;12.0;12.0
+pulpo;gallega;daily;false;false;true;true;12.0;12.0;12.0
+1;1;1;true;false;false;false;1.0;1.0;1.0
+comida;buenas;tardes;false;false;true;false;12.0;12.0;12.0

@@ -1,0 +1,7 @@
+Paella;Paella tradicional;2.0;Pollo;Pollo de campo;Dayly;true;false;false;false;10.0;20.0;5.0;4.0;Arroz;Paella 2;Dayly;false;false;false;true;30.0;0.0;50.0
+Huevos revueltos;Huevos revueltos con aceite de oliva;3.0;Huevo;Prueba 2;Dayly;false;false;false;true;30.0;0.0;50.0
+Cerdo guisado;Carne de cerdo tierna;20.0;Carne de cerdo;Carne de cerdo tierna;Weekly;false;false;false;false;100.0;0.0;50.0
+Tortilla española;huevos;6.0;huevos;huevos;Daily;false;false;false;true;50.0;0.0;25.0
+Tortilla;Huevos camperos;2.0;Huevos;Huevos camperos;Daily;false;false;false;true;20.0;2.0;20.0;3.0;Sal;Sal rosa del himalaya;Daily;false;false;false;false;1.0;0.0;0.0
+Pollo en pepitoria;Muslos de pollo campero;4.0;Pollo;Muslos de pollo campero;Weekly;false;false;false;false;200.0;0.0;50.0;10.0;Almendras;Almendras crudas picadas;Daily;false;false;false;false;200.0;5.0;20.0
+

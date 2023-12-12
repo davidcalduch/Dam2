@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="0.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.imagenscalerfx2.HelloController">
+   <children>
+      <VBox layoutX="220.0" layoutY="185.0" prefHeight="145.0" prefWidth="125.0" style="-fx-border-color: black;">
+         <children>
+            <ImageView fx:id="imagen" fitHeight="148.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <Button fx:id="btnStart" layoutX="280.0" layoutY="140.0" mnemonicParsing="false" onAction="#start" text="Start" />
+      <ListView fx:id="listaImagen" layoutX="14.0" layoutY="52.0" prefHeight="342.0" prefWidth="154.0" />
+      <Text layoutX="52.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Images" wrappingWidth="66.06836700439453">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="451.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scaled Instances" wrappingWidth="134.86829376220703">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ListView fx:id="ListaRescalada" layoutX="431.0" layoutY="52.0" prefHeight="342.0" prefWidth="154.0" />
+      <Label fx:id="labelStatus" layoutX="280.0" layoutY="369.0" text="Label" />
+   </children>
+</AnchorPane>
