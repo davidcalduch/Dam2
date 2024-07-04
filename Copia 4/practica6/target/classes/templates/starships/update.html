@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar y Actualizar Nave Espacial</title>
+</head>
+<body>
+    <h1>Actualizar Nave Espacial</h1>
+    <form th:action="@{/starships/load}" th:method="post">
+        <fieldset>
+            <legend>Seleccionar Nave Espacial</legend>
+            <table>
+                <tr>
+                    <td><label for="codigo">Código: </label></td>
+                    <td><input type="text" id="codigo" name="codigo" required/></td>
+                </tr>
+            </table>
+            <button type="submit">Cargar Nave Espacial</button>
+        </fieldset>
+    </form>
+
+    <div th:if="${error}" style="color: red;">
+        <p th:text="${error}"></p>
+    </div>
+
+    <form th:action="@{'/starships/update/' + ${starship.codigo}}" th:method="post" th:if="${starship != null}">
+        <fieldset>
+            <legend>Actualizar Nave Espacial</legend>
+            <input type="hidden" name="_method" value="put"/>
+            <table>
+                <tr>
+                    <td><label>Código: </label></td>
+                    <td><input type="text" name="codigo" th:value="${starship.codigo}" readonly required/></td>
+                </tr>
+                <tr>
+                    <td><label>Nombre: </label></td>
+                    <td><input type="text" name="name" th:value="${starship.name}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Modelo: </label></td>
+                    <td><input type="text" name="model" th:value="${starship.model}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Clase: </label></td>
+                    <td><input type="text" name="starshipClass" th:value="${starship.starshipClass}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Fabricante: </label></td>
+                    <td><input type="text" name="manufacturer" th:value="${starship.manufacturer}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Costo en Créditos: </label></td>
+                    <td><input type="text" name="costInCredits" th:value="${starship.costInCredits}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Longitud: </label></td>
+                    <td><input type="text" name="length" th:value="${starship.length}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Tripulación: </label></td>
+                    <td><input type="text" name="crew" th:value="${starship.crew}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Pasajeros: </label></td>
+                    <td><input type="text" name="passengers" th:value="${starship.passengers}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Velocidad Máxima: </label></td>
+                    <td><input type="text" name="maxAtmospheringSpeed" th:value="${starship.maxAtmospheringSpeed}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Rating de Hyperdrive: </label></td>
+                    <td><input type="text" name="hyperdriveRating" th:value="${starship.hyperdriveRating}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>MGLT: </label></td>
+                    <td><input type="text" name="mglt" th:value="${starship.mglt}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Capacidad de Carga: </label></td>
+                    <td><input type="text" name="cargoCapacity" th:value="${starship.cargoCapacity}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Consumibles: </label></td>
+                    <td><input type="text" name="consumables" th:value="${starship.consumables}" required/></td>        
+                </tr>
+            </table>
+            <button type="submit">Actualizar</button>
+        </fieldset>
+    </form>
+</body>
+</html>

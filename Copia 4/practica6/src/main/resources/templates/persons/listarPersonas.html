@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+    
+    <table th:if="${not people.isEmpty()}">
+        <thead>
+            <tr>
+                <!-- <th>Id</th> -->
+                <th>Nombre</th>
+                <th>BirthYear</th>
+                <th>EyeColor</th>
+                <th>Gender</th>
+                <th>HairColor</th>
+                <th>Heigth</th>
+                <th>Mass</th>
+                <th>SkinColor</th>
+                <th>Created</th>
+                <th>Edited</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="person: ${people}">
+                <!-- <td th:text="${person.id}"></td> -->
+                <td th:text="${person.name}"></td>
+                <td th:text="${person.birthYear}"></td>
+                <td th:text="${person.eyeColor}"></td>
+                <td th:text="${person.gender}"></td>
+                <td th:text="${person.hairColor}"></td>
+                <td th:text="${person.height}"></td>
+                <td th:text="${person.mass}"></td>
+                <td th:text="${person.skinColor}"></td>
+                <td th:text="${person.created}"></td>
+                <td th:text="${person.edited}"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p><a th:href="@{/persons}">Volver</a></p>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Añadir Nave Estelar</title>
+    <script>
+        // Función para actualizar el reloj
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Actualizar el reloj cada segundo
+        setInterval(updateClock, 1000);
+
+        // Actualizar el reloj al cargar la página
+        window.onload = updateClock;
+    </script>
+</head>
+<body>
+    <h1 th:text="${titulo}">Añadir Nave Estelar</h1>
+    <form th:action="@{/starships/anyadir}" th:object="${starship}" method="post">
+        <div th:if="${#fields.hasErrors('*')}">
+            <ul>
+                <li th:each="err : ${#fields.errors('*')}" th:text="${err}">Error</li>
+            </ul>
+        </div>
+        <fieldset>
+            <legend>Datos de la nave estelar</legend>
+            <table>
+                <tr>
+                    <td><label>Nombre: </label></td>
+                    <td><input type="text" th:field="*{name}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Modelo: </label></td>
+                    <td><input type="text" th:field="*{model}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Clase de Nave: </label></td>
+                    <td><input type="text" th:field="*{starshipClass}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Fabricante: </label></td>
+                    <td><input type="text" th:field="*{manufacturer}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Costo en Créditos: </label></td>
+                    <td><input type="text" th:field="*{costInCredits}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Longitud: </label></td>
+                    <td><input type="text" th:field="*{length}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Tripulación: </label></td>
+                    <td><input type="text" th:field="*{crew}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Pasajeros: </label></td>
+                    <td><input type="text" th:field="*{passengers}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Velocidad Máxima Atmosférica: </label></td>
+                    <td><input type="text" th:field="*{maxAtmospheringSpeed}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Clasificación del Hiperimpulsor: </label></td>
+                    <td><input type="text" th:field="*{hyperdriveRating}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>MGLT: </label></td>
+                    <td><input type="text" th:field="*{mglt}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Capacidad de Carga: </label></td>
+                    <td><input type="text" th:field="*{cargoCapacity}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Consumibles: </label></td>
+                    <td><input type="text" th:field="*{consumables}" required/></td>
+                </tr>
+                <!-- Agregar los demás campos según sea necesario -->
+                <tr>
+                    <td><label>Reloj: </label></td>
+                    <td><span id="clock"></span></td>
+                </tr>
+            </table>
+            <button type="submit">Registrar</button>
+        </fieldset>
+    </form>
+    <p><a th:href="@{/starships}">Volver</a></p>
+</body>
+</html>

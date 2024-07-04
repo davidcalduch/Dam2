@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Persona</title>
+</head>
+<body>
+    <h1>Actualizar Persona</h1>
+    <form th:action="@{/persons/load}" method="post">
+        <fieldset>
+            <legend>Seleccionar Persona</legend>
+            <table>
+                <tr>
+                    <td><label for="codigo">Código:</label></td>
+                    <td><input type="number" id="codigo" name="codigo" required/></td>
+                </tr>
+            </table>
+            <button type="submit">Cargar Persona</button>
+        </fieldset>
+    </form>
+
+    <div th:if="${error}" style="color: red;">
+        <p th:text="${error}"></p>
+    </div>
+
+    <form th:action="@{'/persons/update/' + ${person.codigo}}" th:method="post" th:if="${person != null}">
+        <fieldset>
+            <legend>Actualizar Persona</legend>
+            <input type="hidden" name="_method" value="put"/>
+            <table>
+                <tr>
+                    <td><label>Código:</label></td>
+                    <td><input type="text" name="codigo" th:value="${person.codigo}" readonly required/></td>
+                </tr>
+               
+                <tr>
+                    <td><label>Nombre:</label></td>
+                    <td><input type="text" name="name" th:value="${person.name}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Año de Nacimiento:</label></td>
+                    <td><input type="text" name="birthYear" th:value="${person.birthYear}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Color de Ojos:</label></td>
+                    <td><input type="text" name="eyeColor" th:value="${person.eyeColor}" required/></td>
+                </tr>   
+                <tr>
+                    <td><label>Altura:</label></td>
+                    <td><input type="text" name="height" th:value="${person.height}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Masa:</label></td>
+                    <td><input type="text" name="mass" th:value="${person.mass}" required/></td>
+                </tr>
+                
+                <tr>
+                    <td><label>Género:</label></td>
+                    <td><input type="text" name="gender" th:value="${person.gender}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Color de Cabello:</label></td>
+                    <td><input type="text" name="hairColor" th:value="${person.hairColor}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Color de Piel:</label></td>
+                    <td><input type="text" name="skinColor" th:value="${person.skinColor}" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Planeta de Origen:</label></td>
+                    <td><input type="text" name="homeworld" th:value="${person.homeworld}" required/></td>
+                </tr>
+              
+                <!-- Agrega más campos de acuerdo a tus necesidades -->
+            </table>
+            <button type="submit">Actualizar</button>
+        </fieldset>
+    </form>
+</body>
+</html>

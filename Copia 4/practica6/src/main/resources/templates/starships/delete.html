@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Gestión de Naves Estelares</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+   <script>
+    function fetchStarship() {
+        const codigo = document.getElementById('codigo').value;
+        console.log(`Fetching starship with codigo: ${codigo}`);
+        if (codigo) {
+            fetch(`/api/starships/${codigo}`)
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Data received:', data);
+                    document.getElementById('name').value = data.name || '';
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${titulo}">Gestión de Naves Estelares</h1>
+        <form th:action="@{/starships/delete}" th:object="${starship}" method="post">
+            <div th:if="${#fields.hasErrors('*')}">
+                <ul>
+                    <li th:each="err : ${#fields.errors('*')}" th:text="${err}">Error</li>
+                </ul>
+            </div>
+            <fieldset>
+                <legend>Datos de la nave estelar</legend>
+                <table>
+                    <tr>
+                        <td><label>ID: </label></td>
+                        <td><input type="text" th:field="*{codigo}" id="codigo" oninput="fetchStarship()" required/></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nombre: </label></td>
+                        <td><input type="text" th:field="*{name}" id="name" required/></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <button type="submit">Borrar</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <p><a th:href="@{/starships}">Volver</a></p>
+    </div>
+</body>
+</html>

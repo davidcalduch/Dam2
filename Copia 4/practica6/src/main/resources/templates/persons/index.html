@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+
+    <ul>
+        <li><a th:href="@{/persons/listarPersonas}">Listar Personas</a></li>
+        <li><a th:href="@{/persons/anyadir}">Añadir Persona</a></li>
+        <li><a th:href="@{/persons/update}">Actualizar Persona</a></li>
+        <li><a th:href="@{/persons/delete}">Eliminar Persona</a></li>
+    </ul>
+    
+    <p><a th:href="@{/}">Volver a Inicio</a></p>
+</body>
+</html>

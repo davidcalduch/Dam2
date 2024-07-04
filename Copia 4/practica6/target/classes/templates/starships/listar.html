@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Añadir Nave Estelar</title>
+</head>
+<body>
+    <h1 th:text="${titulo}"></h1>
+    
+    <table th:if="${not starships.isEmpty()}">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Modelo</th>
+                <th>Clase</th>
+                <th>Fabricante</th>
+                <th>Costo en Créditos</th>
+                <th>Longitud</th>
+                <th>Tripulación</th>
+                <th>Pasajeros</th>
+                <th>Velocidad Máxima</th>
+                <th>Rating de Hyperdrive</th>
+                <th>MGLT</th>
+                <th>Capacidad de Carga</th>
+                <th>Consumibles</th>
+                <th>Creado</th>
+                <th>Editado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="starship : ${starships}">
+                <!-- <td th:text="${starship.id}"></td> -->
+                <td th:text="${starship.name}"></td>
+                <td th:text="${starship.model}"></td>
+                <td th:text="${starship.starshipClass}"></td>
+                <td th:text="${starship.manufacturer}"></td>
+                <td th:text="${starship.costInCredits}"></td>
+                <td th:text="${starship.length}"></td>
+                <td th:text="${starship.crew}"></td>
+                <td th:text="${starship.passengers}"></td>
+                <td th:text="${starship.maxAtmospheringSpeed}"></td>
+                <td th:text="${starship.hyperdriveRating}"></td>
+                <td th:text="${starship.mglt}"></td>
+                <td th:text="${starship.cargoCapacity}"></td>
+                <td th:text="${starship.consumables}"></td>
+                <td th:text="${starship.created}"></td>
+                <td th:text="${starship.edited}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><a th:href="@{/starships}">Volver</a></p>
+</body>
+</html>

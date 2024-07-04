@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}">Añadir Persona</title>
+</head>
+<body>
+    <h1 th:text="${titulo}">Añadir Persona</h1>
+    <form th:action="@{/persons/anyadir}" th:object="${person}" method="post">
+        <div th:if="${#fields.hasErrors('*')}">
+            <ul>
+                <li th:each="err : ${#fields.errors('*')}" th:text="${err}">Error</li>
+            </ul>
+        </div>
+        <fieldset>
+            <legend>Datos de la persona</legend>
+            <table>
+                <tr>
+                    <td><label for="name">Nombre:</label></td>
+                    <td><input type="text" id="name" th:field="*{name}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="birthYear">Año de Nacimiento:</label></td>
+                    <td><input type="text" id="birthYear" th:field="*{birthYear}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="eyeColor">Color de Ojos:</label></td>
+                    <td><input type="text" id="eyeColor" th:field="*{eyeColor}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="height">Altura:</label></td>
+                    <td><input type="text" id="height" th:field="*{height}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="mass">Masa:</label></td>
+                    <td><input type="text" id="mass" th:field="*{mass}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="edited">Editado:</label></td>
+                    <td><input type="text" id="edited" th:field="*{edited}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="created">Creado:</label></td>
+                    <td><input type="text" id="created" th:field="*{created}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Género:</label></td>
+                    <td><input type="text" id="gender" th:field="*{gender}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="hairColor">Color de Cabello:</label></td>
+                    <td><input type="text" id="hairColor" th:field="*{hairColor}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="skinColor">Color de Piel:</label></td>
+                    <td><input type="text" id="skinColor" th:field="*{skinColor}" required></td>
+                </tr>
+                <tr>
+                    <td><label for="homeworld">Planeta de Origen:</label></td>
+                    <td><input type="text" id="homeworld" th:field="*{homeworld}" required></td>
+                </tr>
+            </table>
+            <button type="submit">Registrar</button>
+        </fieldset>
+    </form>
+    <p><a th:href="@{/persons/listarPersonas}">Volver a Inicio</a></p>
+</body>
+</html>

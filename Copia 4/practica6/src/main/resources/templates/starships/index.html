@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title th:text="${titulo}">Starship</title>
+<body>
+    <h1 th:text="${titulo}">Starship</h1>
+    <ul>
+        <li><a th:href="@{/starships/anyadir}">Añadir</a></li>
+        <li><a th:href="@{/starships/listar}">Listar</a></li>
+        <li><a th:href="@{/starships/update}">Update</a></li>
+        <li><a th:href="@{/starships/delete}">Delete</a></li>
+    </ul>    
+    <p><a th:href="@{/}">Volver</a></p>
+</body>
+</html>
